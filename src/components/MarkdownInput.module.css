@@ -1,15 +1,9 @@
-/* Custom CSS for columns and responsive border */
 .column {
   padding: 10px;
-  /* background-color: #f0f0f0;
-  border: 1px solid #ccc;
-  border-right: none; Remove right border initially */
 }
 
 @media (min-width: 768px) {
-  /* Apply border between columns on screens with a minimum width of 768px */
   .column {
     border-right: 1px solid #ccc;
-    height: 100%;
   }
 }

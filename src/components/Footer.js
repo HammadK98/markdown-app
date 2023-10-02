@@ -10,9 +10,15 @@ function Footer(props) {
   return (
     <>
       <Col>
-        <Button onClick={saveFileHandler} variant="outline-secondary">
-          Save
-        </Button>
+        <div className="d-grid gap-2 pt-4 pb-4">
+          <Button
+            onClick={saveFileHandler}
+            variant="outline-secondary"
+            size="lg"
+          >
+            Save
+          </Button>
+        </div>
       </Col>
     </>
   );

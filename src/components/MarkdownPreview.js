@@ -5,11 +5,13 @@ import remarkGfm from "remark-gfm";
 function MarkdownPreview(props) {
   return (
     <Col className="pt-2">
-      <h2 className="text-center text-secondary">{props.showTitle}</h2>
+      <h2 style={{ height: "5vh" }} className="text-center text-secondary">
+        {props.showTitle}
+      </h2>
       <hr />
       <ReactMarkdown
         children={props.onSaveMarkdownInput}
-        remarkPlugins={[[remarkGfm, {singleTilde: false}]]}
+        remarkPlugins={[[remarkGfm, { singleTilde: false }]]}
       />
     </Col>
   );

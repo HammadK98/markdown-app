@@ -1,28 +1,16 @@
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import { Col, Form, Row } from "react-bootstrap";
 import classes from "./MarkdownInput.module.css";
 
 function MarkdownInput(props) {
-  const textRef = useRef();
+  // eslint-disable-next-line
   const [value, setValue] = useState();
 
-  useEffect(() => {
-    if (textRef && textRef.current) {
-      textRef.current.style.height = "0px";
-      const taHeight = textRef.current.scrollHeight;
-      textRef.current.style.height = taHeight + "px";
-    }
-  }, [value]);
-
   function fileNameHandler(event) {
-    event.preventDefault();
-
     props.onFileNameInput(event.target.value);
   }
 
   function textInputHandler(event) {
-    event.preventDefault();
-
     setValue(event.target.value);
     props.onSaveMarkdownInput(event.target.value);
   }
@@ -33,6 +21,7 @@ function MarkdownInput(props) {
           <Col className="text-muted">
             <Form.Control
               className="border-0 shadow-none"
+              style={{ height: "5vh" }}
               type="text"
               placeholder="Untitled-Note"
               onChange={fileNameHandler}
@@ -46,10 +35,10 @@ function MarkdownInput(props) {
               as="textarea"
               className="border-0 shadow-none text-start"
               size="lg"
+              style={{ height: "67.3vh", resize: "none" }}
               type="text"
               placeholder="# Enter your Markdown"
               onChange={textInputHandler}
-              ref={textRef}
             />
           </Form.Group>
         </Row>

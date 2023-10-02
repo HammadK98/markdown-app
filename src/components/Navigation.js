@@ -1,4 +1,3 @@
-import { faMarkdown } from "@fortawesome/free-brands-svg-icons";
 import { faBook } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Col, Container, Navbar, Row } from "react-bootstrap";
@@ -6,7 +5,7 @@ import { Col, Container, Navbar, Row } from "react-bootstrap";
 function Navigation() {
   return (
     <>
-      <Navbar style={{ backgroundColor: "#861919" }} data-bs-theme="dark">
+      <Navbar style={{ backgroundColor: "#861919", height: "7vh" }} data-bs-theme="dark">
         <Container>
           <Row xs="auto">
             <Col>
