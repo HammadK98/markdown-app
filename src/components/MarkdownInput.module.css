@@ -1,9 +1,0 @@
-.column {
-  padding: 10px;
-}
-
-@media (min-width: 768px) {
-  .column {
-    border-right: 1px solid #ccc;
-  }
-}
