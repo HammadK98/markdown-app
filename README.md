@@ -4,6 +4,8 @@ React app that allows to create, read, and save Markdown text.
 
 If installed locally, project runs on http://localhost:3000/ .
 
+A sample aplication is hosted [here]([http://springboot.hakhan.me/showFormForLogin](https://promarkdown.netlify.app)). All features are provided for users to play with. 
+
 ## Requirements
 This module requires no modules outside of access to a web browser.
 
